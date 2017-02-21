@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EinsteinQuotesApp.Main">
+	<StackLayout VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand">
+
+		<Button Text="Next"
+		        Clicked="Button_OnClicked"
+		        Margin="10" />
+		
+		<Label Text="{Binding Source={x:Reference FontSizeSlider}, Path=Value, StringFormat='Font size {0:F1}'}"
+		       FontSize="30"
+		       Margin="10" />
+		
+		<Slider x:Name="FontSizeSlider"
+		        Maximum="50"
+		        Minimum="10" />
+		
+		<Label Text="Nothing"
+		       x:Name="QuoteLabel"
+		       FontSize="{Binding Source={x:Reference FontSizeSlider}, Path=Value}"
+		       FontAttributes="Italic"
+		       Margin="10"
+					 HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+		
+		<Label Text="- Einstein" 
+					 HorizontalOptions="End"
+					 FontSize="25"
+		       FontAttributes="Bold"
+					 Margin="10"/>
+
+		<!-- <Image Source="https://upload.wikimedia.org/wikipedia/commons/d/d3/Albert_Einstein_Head.jpg" Aspect="AspectFit" Margin="10"/>-->
+	</StackLayout>
+
+</ContentPage>
