@@ -2,35 +2,58 @@
 
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="EinsteinQuotesApp.Main">
-	<StackLayout VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand">
+             x:Class="EinsteinQuotesApp.Main"
+             Padding="20">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness"
+                    Android="20, 30, 20, 20"
+                    WinPhone="20, 40, 20, 20"
+                    />
+
+
+    </ContentPage.Padding>
+	<StackLayout VerticalOptions="StartAndExpand" 
+                 HorizontalOptions="FillAndExpand"
+                 BindingContext="{x:Reference TheSlider}">
 
 		<Button Text="Next"
 		        Clicked="Button_OnClicked"
-		        Margin="10" />
+		        Margin="10"
+                />
 		
-		<Label Text="{Binding Source={x:Reference FontSizeSlider}, Path=Value, StringFormat='Font size {0:F1}'}"
+		<Label Text="{Binding Value, StringFormat='Font size {0:F1}'}"
+               HorizontalOptions="Center"
+               HorizontalTextAlignment="Center"
 		       FontSize="30"
-		       Margin="10" />
+		       Margin="10"
+               />
 		
-		<Slider x:Name="FontSizeSlider"
+		<Slider x:Name="TheSlider"
 		        Maximum="50"
-		        Minimum="10" />
+		        Minimum="10"
+                />
 		
 		<Label Text="Nothing"
 		       x:Name="QuoteLabel"
-		       FontSize="{Binding Source={x:Reference FontSizeSlider}, Path=Value}"
+		       FontSize="{Binding Value}"
 		       FontAttributes="Italic"
 		       Margin="10"
-					 HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+			   HorizontalTextAlignment="Center"
+               VerticalTextAlignment="Center"
+               />
 		
 		<Label Text="- Einstein" 
-					 HorizontalOptions="End"
-					 FontSize="25"
+               HorizontalOptions="End"
+               FontSize="20"
 		       FontAttributes="Bold"
-					 Margin="10"/>
+               Margin="10"
+               />
 
-		<!-- <Image Source="https://upload.wikimedia.org/wikipedia/commons/d/d3/Albert_Einstein_Head.jpg" Aspect="AspectFit" Margin="10"/>-->
+		<Image Source="https://upload.wikimedia.org/wikipedia/commons/d/d3/Albert_Einstein_Head.jpg" 
+               Aspect="AspectFit" 
+               Margin="10"
+               />
+		
 	</StackLayout>
 
 </ContentPage>
