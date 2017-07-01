@@ -30,9 +30,10 @@ namespace EinsteinQuotesApp
         {
             InitializeComponent();
             QuoteLabel.Text = EinsteinQuotes[CurrentQuoteIndex];
+            QuoteLabel.Text = SayThatYouAreHappy();
         }
 
-        private void Button_OnClicked(object sender, EventArgs e)
+        void Button_OnClicked(object sender, EventArgs e)
         {
             if (CurrentQuoteIndex < EinsteinQuotes.Length - 1)
             {
@@ -45,5 +46,11 @@ namespace EinsteinQuotesApp
 
             QuoteLabel.Text = EinsteinQuotes[CurrentQuoteIndex];
         }
+
+        string SayThatYouAreHappy(){
+            return "I'm happy af!";
+        }
+
+
     }
 }
