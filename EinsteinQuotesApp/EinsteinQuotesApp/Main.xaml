@@ -7,12 +7,13 @@
 
     
     <ContentPage.Padding>
+        
         <OnPlatform x:TypeArguments="Thickness"
                     Android="20, 30, 20, 20"
                     WinPhone="20, 40, 20, 20"
-                    iOS="40, 40, 40, 40"
-
-                    />
+                    iOS="40, 40, 40, 40">
+        </OnPlatform>
+        
     </ContentPage.Padding>
 
 
@@ -23,20 +24,17 @@
 
 		<Button Text="Next"
 		        Clicked="Button_OnClicked"
-		        Margin="10"
-                />
+		        Margin="10"/>
 		
 		<Label Text="{Binding Value, StringFormat='Font size {0:F1}'}"
                HorizontalOptions="Center"
                HorizontalTextAlignment="Center"
 		       FontSize="30"
-		       Margin="10"
-               />
+		       Margin="10"/>
 		
 		<Slider x:Name="TheSlider"
 		        Maximum="50"
-		        Minimum="10"
-                />
+		        Minimum="10"/>
 		
 		<Label Text="Nothing"
 		       x:Name="QuoteLabel"
@@ -44,21 +42,18 @@
 		       FontAttributes="Italic"
 		       Margin="10"
 			   HorizontalTextAlignment="Center"
-               VerticalTextAlignment="Center"
-               />
+               VerticalTextAlignment="Center"/>
 		
 		<Label Text="- Einstein" 
                HorizontalOptions="End"
                FontSize="20"
 		       FontAttributes="Bold"
-               Margin="10"
-               />
+               Margin="10"/>
 
 
 		<Image Source="https://upload.wikimedia.org/wikipedia/commons/d/d3/Albert_Einstein_Head.jpg" 
                Aspect="AspectFit" 
-               Margin="10"
-               />
+               Margin="10"/>
 		
 	</StackLayout>
 
