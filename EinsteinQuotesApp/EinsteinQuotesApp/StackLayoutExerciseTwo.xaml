@@ -4,8 +4,11 @@
              x:Class="EinsteinQuotesApp.StackLayoutExerciseTwo">
 
     <ContentPage.Padding>
-        <OnPlatform x:TypeArguments="Thickness"
-                    iOS="0, 20, 0, 0"/>
+        
+        <OnPlatform 
+            x:TypeArguments="Thickness"
+            iOS="0, 20, 0, 0"/>
+        
     </ContentPage.Padding>
     <ContentPage.Content>
         <StackLayout
@@ -16,7 +19,7 @@
             <Label Text="nyc_photographer"/>
             <Image Source="http://lorempixel.com/1920/1080/nature/3/"/>
             <StackLayout
-                Spacing="10"
+                Spacing="20"
                 Padding="0, 15, 0, 0"
                 Orientation="Horizontal">
 
@@ -32,7 +35,7 @@
 
             <Label FontAttributes="Bold" Text="700 Likes"/>
 
-            <Label Text="This is a shot yesterday in Skanor, Sweden, when driving home, from a couple of days of work in Denmark"/>
+            <Label TextColor="#444" Text="This is a shot yesterday in Skanor, Sweden, when driving home, from a couple of days of work in Denmark"/>
             
         </StackLayout>
     </ContentPage.Content>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EinsteinQuotesApp.GridPage"
+             Padding="0, 20, 0, 0">
+    <Grid>
+        
+        // Grid.Row is an example of an attached bindable property.
+        
+        <Label Grid.Row="0" Grid.Column="0" Text="Label 1" BackgroundColor="Silver"/>
+        <Label Grid.Row="0" Grid.Column="1" Text="Label 1" BackgroundColor="Silver"/>
+        <Label Grid.Row="1" Grid.Column="0" Text="Label 1" BackgroundColor="Silver"/>
+        <Label Grid.Row="1" Grid.Column="1" Text="Label 1" BackgroundColor="Silver"/>
+        
+    </Grid>
+
+</ContentPage>

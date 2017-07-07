@@ -11,7 +11,7 @@ namespace EinsteinQuotesApp
     {
         public App()
         {
-            MainPage = new StackLayoutExerciseTwo();
+            MainPage = new GridPage();
         }
 
         protected override void OnStart()
