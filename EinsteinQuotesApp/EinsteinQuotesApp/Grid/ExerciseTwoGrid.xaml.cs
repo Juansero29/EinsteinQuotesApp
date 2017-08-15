@@ -9,12 +9,12 @@ using Xamarin.Forms.Xaml;
 
 namespace EinsteinQuotesApp
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class GridPage : ContentPage
-    {
-        public GridPage()
-        {
-            InitializeComponent();
-        }
-    }
+	[XamlCompilation(XamlCompilationOptions.Compile)]
+	public partial class ExerciseTwoGrid : ContentPage
+	{
+		public ExerciseTwoGrid ()
+		{
+			InitializeComponent ();
+		}
+	}
 }

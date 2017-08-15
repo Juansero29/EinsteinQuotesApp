@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EinsteinQuotesApp.RelativeLayout;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,7 +12,7 @@ namespace EinsteinQuotesApp
     {
         public App()
         {
-            MainPage = new GridPage();
+            MainPage = new RelativePage();
         }
 
         protected override void OnStart()
