@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinForms.RelativePage">
+    <ContentPage.Content>
+        <!--<RelativeLayout>
+
+            --><!--In here we can use attached bindable properties like: XConstraint, YConstraint, WidthConstraint, HeightConstraint, BoundsConstraint--><!--
+            <BoxView Color="Aqua" x:Name="Banner"
+                     RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
+                     RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.3}"/>
+            <BoxView Color="Silver"
+                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, Property=Height, Factor=1, ElementName=Banner, Constant=20}"/>
+        </RelativeLayout>-->
+    </ContentPage.Content>
+</ContentPage>

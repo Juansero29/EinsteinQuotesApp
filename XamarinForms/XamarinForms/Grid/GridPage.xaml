@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinForms.GridPage"
+             >
+
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness"
+                    iOS="0, 20, 0, 0"/>
+    </ContentPage.Padding>
+    
+    <Grid BackgroundColor="Yellow" RowSpacing="40" ColumnSpacing="40">
+
+        
+        <!-- This is property element syntax -->
+        <Grid.RowDefinitions>
+            
+            <!-- Hardcoded height looks like this -->
+            <RowDefinition Height="100"/>
+            
+            <!-- Dyncamically set: 2* will be twice as high as the *-->
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <!--This column will be wide enough to fit all its children-->
+            <ColumnDefinition Width="Auto"/>
+            
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Row="0" Grid.Column="0" Text="Label 1" BackgroundColor="Silver"/>
+        <Label Grid.Row="0" Grid.Column="1" Text="Label 2" BackgroundColor="Silver"/>
+        <Label Grid.Row="1" Grid.Column="0" Text="Label 3" BackgroundColor="Silver"/>
+        <Label Grid.Row="1" Grid.Column="1" Text="Label 4" BackgroundColor="Silver"/>
+        <Label Grid.Row="2" Grid.ColumnSpan="3" Text="ColumnSpan" BackgroundColor="Silver"/>
+        <Label Grid.RowSpan="3" Grid.Column="2" Text="RowSpan" BackgroundColor="Silver"/>
+    </Grid>
+
+</ContentPage>
