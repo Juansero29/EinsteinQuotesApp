@@ -5,7 +5,7 @@
              Padding="0, 20, 0, 0">
     
     
-    <AbsoluteLayout>
+    <AbsoluteLayout> <!--AbsoluteLayout.LayoutBounds="x, y, width, height". They can have absolute or proportional values. --> 
         <BoxView Color="Aqua" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All"/>
         <BoxView Color="White" AbsoluteLayout.LayoutBounds="0.5, 0.1, 100, 100" AbsoluteLayout.LayoutFlags="PositionProportional"/>
         <Button Text="Get started" BackgroundColor="Silver" TextColor="White" AbsoluteLayout.LayoutBounds="0, 1, 1, 50" AbsoluteLayout.LayoutFlags="PositionProportional, WidthProportional"/>

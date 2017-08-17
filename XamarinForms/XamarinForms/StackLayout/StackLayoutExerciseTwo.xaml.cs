@@ -15,6 +15,9 @@ namespace XamarinForms
 		public StackLayoutExerciseTwo ()
 		{
 			InitializeComponent ();
+
+
+
 		}
 	}
 }

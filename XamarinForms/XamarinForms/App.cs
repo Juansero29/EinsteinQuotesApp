@@ -8,7 +8,7 @@ namespace XamarinForms
     {
         public App()
         {
-            MainPage = new EmbeddedImage();
+            MainPage = new PhotoGallery();
         }
 
         protected override void OnStart()

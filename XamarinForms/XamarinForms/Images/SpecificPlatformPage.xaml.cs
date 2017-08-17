@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using XamarinForms;
 
 namespace XamarinForms.Images
 {
@@ -15,11 +15,10 @@ namespace XamarinForms.Images
         public SpecificPlatformPage()
         {
             InitializeComponent();
-            btn.Image = (FileImageSource) ImageSource.FromFile(Device.OnPlatform(
-                iOS: "clock.png",
-                Android: "clock.png",
-                WinPhone: "Images/clock.png"
-                ));
+
+            btn.Image = (FileImageSource)ImageSource.FromFile(Helpers.GiveStringForThisDevice("clock.png", "clock.png", "Images/clock.png"));
+
+           
         }
     }
 }

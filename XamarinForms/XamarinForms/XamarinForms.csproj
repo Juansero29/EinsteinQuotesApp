@@ -62,6 +62,7 @@
     <Compile Include="EinsteinQuotesApp.xaml.cs">
       <DependentUpon>EinsteinQuotesApp.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\Helpers.cs" />
     <Compile Include="Images\EmbeddedImage.xaml.cs">
       <DependentUpon>EmbeddedImage.xaml</DependentUpon>
     </Compile>
@@ -72,6 +73,9 @@
       <DependentUpon>SpecificPlatformPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="MarkupExtensions\EmbeddedImage.cs" />
+    <Compile Include="PhotoGallery.xaml.cs">
+      <DependentUpon>PhotoGallery.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RelativeLayout\RelativeLayoutExerciseOne.xaml.cs">
       <DependentUpon>RelativeLayoutExerciseOne.xaml</DependentUpon>
@@ -189,6 +193,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Images\SpecificPlatformPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="PhotoGallery.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
