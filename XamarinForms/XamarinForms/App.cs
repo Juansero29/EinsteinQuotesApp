@@ -1,6 +1,6 @@
 ﻿
 using Xamarin.Forms;
-using XamarinForms.Images;
+using XamarinForms.Lists;
 
 namespace XamarinForms
 {
@@ -8,7 +8,7 @@ namespace XamarinForms
     {
         public App()
         {
-            MainPage = new PhotoGallery();
+            MainPage = new ListPage();
         }
 
         protected override void OnStart()
