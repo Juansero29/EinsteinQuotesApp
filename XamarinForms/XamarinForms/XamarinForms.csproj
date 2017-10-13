@@ -75,6 +75,8 @@
     <Compile Include="Lists\ListPage.xaml.cs">
       <DependentUpon>ListPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Lists\Models\Contact.cs" />
+    <Compile Include="Lists\Models\ContactGroup.cs" />
     <Compile Include="MarkupExtensions\EmbeddedImage.cs" />
     <Compile Include="PhotoGallery.xaml.cs">
       <DependentUpon>PhotoGallery.xaml</DependentUpon>

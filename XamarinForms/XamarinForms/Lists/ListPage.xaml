@@ -4,8 +4,32 @@
              x:Class="XamarinForms.Lists.ListPage">
     <ContentPage.Content>
         <StackLayout>
-
-            <ListView x:Name="listView" SeparatorColor="Blue"/>
+            <SearchBar Placeholder="Search..." TextChanged="SearchBar_TextChanged"/>
+            <ListView x:Name="listView" SeparatorColor="Silver" HasUnevenRows="True" IsGroupingEnabled="True" GroupDisplayBinding="{Binding Title}" GroupShortNameBinding="{Binding ShortTitle}"
+                      ItemTapped="listView_ItemTapped" ItemSelected="listView_ItemSelected" IsPullToRefreshEnabled="True" Refreshing="listView_Refreshing">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <!--<TextCell Text="{Binding Name}" Detail="{Binding Status}" DetailColor="Blue"/>-->
+                        <!--<ImageCell Text="{Binding Name}" ImageSource="{Binding ImageURL}" Detail="{Binding Status}"/>-->
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Padding="5">
+                                <Image Source="{Binding ImageURL}"/>
+                                <StackLayout Orientation="Vertical" HorizontalOptions="StartAndExpand">
+                                    
+                                    <Label Text="{Binding Name}"/>
+                                    <Label Text="{Binding Status}" TextColor="Gray"/>
+                                    
+                                </StackLayout>
+                                <Button Text="Follow"/>
+                            </StackLayout>
+                            <ViewCell.ContextActions>
+                                <MenuItem Text="Call" Clicked="Call_Clicked" CommandParameter="{Binding .}"/>
+                                <MenuItem Text="Delete" Clicked="Delete_Clicked" CommandParameter="{Binding .}"/>
+                            </ViewCell.ContextActions>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
 
         </StackLayout>
     </ContentPage.Content>
